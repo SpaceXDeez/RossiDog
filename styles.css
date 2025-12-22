@@ -38,6 +38,21 @@ body {
   font-size: 1.2rem;
 }
 
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.site-logo {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 6px;
+  margin-right: 0.5rem;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+}
+
 .logo-paw {
   font-size: 1.4rem;
 }
@@ -280,6 +295,112 @@ body {
   text-align: center;
   font-size: 0.85rem;
   color: #718096;
+}
+
+/* TESTIMONIALS (refined layout + author metadata) */
+
+.testimonials {
+  background: transparent;
+}
+
+.testimonials .testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 0.5rem;
+}
+
+/* Make testimonial images match other rounded images */
+.testimonial img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.9rem;
+  box-shadow: 0 8px 22px rgba(148, 163, 184, 0.3);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+  border-radius: 1rem;
+  padding: 1.5rem 1.6rem;
+  box-shadow: 0 14px 40px rgba(20, 36, 51, 0.06);
+  color: #102028;
+  border-left: 6px solid rgba(99, 102, 241, 0.18);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.testimonial:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px rgba(20, 36, 51, 0.10);
+}
+
+.testimonial blockquote {
+  margin: 0;
+  padding: 0;
+  color: #16324a;
+  font-style: italic;
+  line-height: 1.6;
+  position: relative;
+  font-size: 1rem;
+}
+
+.testimonial blockquote::before {
+  content: '“';
+  position: absolute;
+  left: -0.6rem;
+  top: -0.45rem;
+  font-size: 3rem;
+  color: rgba(99, 102, 241, 0.18);
+  line-height: 1;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-top: 1.1rem;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #e6f4ff 0%, #ffffff 100%);
+  color: #0b4a6f;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.05rem;
+  box-shadow: 0 8px 18px rgba(99, 102, 241, 0.06);
+  border: 2px solid rgba(99, 102, 241, 0.06);
+}
+
+.author-meta .author-name {
+  margin: 0;
+  font-weight: 600;
+  color: #0f2b37;
+}
+
+.author-meta .author-dog {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+@media (max-width: 700px) {
+  .testimonial blockquote::before {
+    left: -0.35rem;
+    font-size: 2.4rem;
+  }
 }
 
 /* RESPONSIVE */
