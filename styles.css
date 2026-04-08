@@ -24,15 +24,17 @@ body {
   background: #ffffffcc;
   backdrop-filter: blur(10px);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   padding: 0.75rem 7vw;
   border-bottom: 1px solid #e2e8f0;
+  gap: 0.5rem;
 }
 
 .logo {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.35rem;
   font-weight: 600;
   font-size: 1.2rem;
@@ -45,7 +47,7 @@ body {
 }
 
 .site-logo {
-  height: 44px;
+  height: 120px;
   width: auto;
   object-fit: contain;
   border-radius: 6px;
@@ -66,6 +68,8 @@ body {
   gap: 1rem;
   align-items: center;
   font-size: 0.95rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .site-header a {
@@ -417,12 +421,12 @@ body {
 
 @media (max-width: 700px) {
   .site-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
+    align-items: center;
+    padding: 0.75rem 4vw;
   }
 
   .site-header nav {
+    justify-content: center;
     flex-wrap: wrap;
   }
 }
