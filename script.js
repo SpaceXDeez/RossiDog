@@ -14,11 +14,14 @@ document.getElementById('age-dylan-card').textContent = calcAge(2010, 1, 5);
 document.getElementById('age-taylor-card').textContent = calcAge(2012, 2, 27);
 document.getElementById('age-katelyn-card').textContent = calcAge(2012, 2, 27);
 
-document.getElementById('change').addEventListener('click', function(){
-  const h = document.getElementById('greeting');
-  if(h.textContent.includes('Hello')){
-    h.textContent = 'Welcome to RossiDog!';
-  } else {
-    h.textContent = 'Hello, RossiDog!';
-  }
-});
+const changeBtn = document.getElementById('change');
+if (changeBtn) {
+  changeBtn.addEventListener('click', function(){
+    const h = document.getElementById('greeting');
+    if(h.textContent.includes('Hello')){
+      h.textContent = 'Welcome to RossiDog!';
+    } else {
+      h.textContent = 'Hello, RossiDog!';
+    }
+  });
+}
